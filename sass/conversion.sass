@@ -1,0 +1,257 @@
+@import 'responsive'
+
+.conversion
+	position: sticky
+	z-index: 11
+	top: 54px
+	max-width: 1200px
+	margin: 0 auto
+	background-color: #e17358
+	transition: 0.3s background-color
+	border-radius: 4px
+	margin-top: 20px
+	margin-bottom: 40px
+	padding-bottom: 10px
+	+media(lg)
+		top: 44px
+	+media(lgm)
+		top: 40px
+
+	&__block
+		display: flex
+		justify-content: space-between
+		align-items: center
+		padding: 11px 0
+		flex-shrink: 0
+
+	&:not(.is-fixed)
+		.hamburger_wraper
+			display: none
+
+		.hidden-links
+			display: none
+
+	&.is-fixed
+		max-width: 100%
+		background-color: #fff
+		border-radius: 0
+		margin: 0
+		padding-bottom: 0
+
+		.container
+			max-width: 100%
+
+		.conversion__title
+			color: #010310
+			padding-left: 10px
+			margin-left: 0px
+			text-transform: uppercase
+			+media(lgm)
+				font-weight: bold
+				padding-left: 0px
+
+		.visible-links
+			display: flex
+
+			.conversion__link
+				white-space: nowrap
+
+		.hidden-links
+			background-color: #fff
+			.conversion__link
+				padding: 7px 10px
+		
+		.conversion__holder
+			display: flex
+			align-items: center
+			+media(lgm)
+				position: relative
+
+		.conversion__block
+			padding: 16px 0
+			+media(lg)
+				padding: 11px 0
+			+media(lgm)
+				padding: 10px 0
+			+media(mini)
+				padding: 12px 0
+			
+		.conversion__link
+			color: #292929
+			padding: 18px 10px
+			font-weight: bold
+			+media(lg)
+				padding: 13px 10px
+			+media(lgm)
+				padding: 7px 10px
+			&:hover:not(.conversion__link--active)
+				color: #e17358
+
+		.conversion__link--active
+			background-color: #e17358
+			color: #fff
+
+		.line-burger,
+		.line-burger:after,
+		.line-burger:before
+			+media(lgm)
+				background-color: #e17358
+
+		.visible-links .conversion__link
+			white-space: nowrap
+
+		.conversion__link--hidden
+			display: none
+
+	&__title
+		font-size: 19px
+		color: #fff
+		margin-left: 10px
+		margin-right: 20px
+		font-weight: 500
+		+media(lgm)
+			font-size: 17px
+		+media(xxs)
+			font-size: 16px
+			padding-bottom: 1px
+		+media(mini)
+			font-size: 14px
+			padding-bottom: 0
+
+	&__list
+		padding-bottom: 10px
+		+media(lgm)
+			display: none
+			position: absolute
+			top: 100%
+			left: 0px
+			width: 100%
+			background-color: #e17358
+		li:not(:last-child)
+			margin-right: 20px
+			margin-bottom: 10px
+
+	&__nav 
+		display: flex
+		flex-basis: 100%
+		+media(lgm)
+			margin-right: 10px
+
+	&__link
+		display: block 
+		font-size: 15px 
+		color: #292929
+		text-decoration: none
+		padding: 5px 10px
+		margin-right: 20px
+		transition: 0.3s color 
+		+media(lgm)
+			display: inline-block
+
+		&:hover 
+			color: #ef6c00 
+
+		&--active
+			color: #fff
+			
+		&:hover:not(.conversion__link--active)
+			color: #fff
+			text-decoration: underline
+
+
+.hidden-links 
+	position: absolute 
+	display: flex
+	flex-direction: column
+	right: 0px 
+	top: 100% 
+	background-color: #e17358
+	+media(lgm)
+		width: calc(100% + 20px)
+		right: -10px
+	li 
+		display: block
+
+		a
+			display: inline-block
+			margin-right: 0px
+			+media(lgm)
+				display: block
+				padding: 0 20px
+				
+
+.hidden 
+	visibility: hidden 
+	display: none
+
+.hamburger_wraper
+	position: absolute 
+	height: 100% 
+	width: 72px
+	top: 0px
+	right: 0 
+	padding: 0 10px 
+	border: 0 
+	outline: none 
+	background-color: #fff
+	color: #292929
+	cursor: pointer 
+	transition: 0.3s background-color, 0.3s color
+	+media(lgm)
+		position: relative
+		width: 25px
+		height: 25px
+		padding: 0px
+		margin-left: auto
+
+	.line-active
+		&:after
+			top: 9px
+
+		&:before
+			bottom: 9px
+
+.hamburger 
+	position: relative 
+	font-size: 15px
+	margin: auto 
+	+media(lgm)
+		display: block
+		position: absolute
+		top: 50%
+		left: 0
+		width: 25px
+		height: 3px
+		background-color: #e17358
+		transition: 0.5s width
+		font-size: 0px
+	&:before, 
+	&:after
+		display: none
+		content: ''
+		position: absolute
+		width: 25px
+		height: 3px
+		background-color: #fff
+		left: 0
+		transition: 0.5s
+		+media(lgm)
+			display: block
+			background-color: #e17358
+
+	&:before
+		bottom: calc(100% + 5px)
+
+	&:after
+		top: calc(100% + 5px)
+
+	&.line-active
+		width: 0
+		&:after
+			top: 9px
+			transform: rotate(-45deg)
+			transform-origin: 0 0
+		&:before
+			bottom: 9px
+			transform: rotate(45deg)
+			transform-origin: 0 100%

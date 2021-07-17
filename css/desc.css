@@ -1,0 +1,411 @@
+.desc__wrap {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+.desc__block {
+	display: flex;
+	align-items: center;
+}
+
+.desc__data,
+.desc__update {
+	color: #e17358;
+	margin-bottom: 15px;
+}
+
+.desc__data span,
+.desc__update span {
+	color: #fff;
+}
+
+.desc__data {
+	margin-right: 25px;
+}
+
+.desc__title {
+	font-size: 36px;
+	color: #fff;
+	text-transform: uppercase;
+	margin-bottom: 1em;
+	font-weight: 900;
+}
+
+.desc__holder {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.desc__image {
+	width: 400px;
+}
+
+.desc__image img {
+	display: block;
+}
+
+.desc__content {
+	width: calc(100% - 400px);
+	padding-left: 20px;
+}
+
+.desc__text {
+	color: #fff;
+}
+
+.desc__text h1,
+.desc__text h2,
+.desc__text h3,
+.desc__text h4,
+.desc__text h5,
+.desc__text h6 {
+	margin: 1em 0;
+	font-weight: 900;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.desc__text h1,
+.desc__text h2 {
+	font-size: 36px;
+}
+
+.desc__text h3 {
+	font-size: 30px;
+}
+
+.desc__text h4,
+.desc__text h5,
+.desc__text h6 {
+	font-size: 24px;
+}
+
+.desc__text p {
+	font-size: 16px;
+	line-height: 1.5;
+	color: #fff;
+	margin-bottom: 1em;
+	text-align: justify;
+}
+
+.desc__text a {
+	color: #e17358;
+	transition: 0.2s ease-out;
+	text-decoration: underline;
+}
+
+.desc__text a:hover {
+	text-decoration: none;
+}
+
+.desc__text ul,
+.desc__text ol {
+	margin: 1.5em 0;
+	padding-left: 30px;
+}
+
+.desc__text ul li {
+	list-style: disc;
+	margin-bottom: 1em;
+	line-height: 1.5;
+}
+
+.desc__text ul li::marker {
+	color: #e17358;
+	font-size: 1.3em;
+}
+
+.desc__text ol li {
+	margin-bottom: 1em;
+	line-height: 1.5;
+}
+
+.desc__text ol li::marker {
+	color: #e17358;
+	font-size: 1.3em;
+}
+
+.desc__text ul li:last-of-type,
+.desc__text ol li:last-of-type {
+	margin-bottom: 0;
+}
+
+.desc__text blockquote {
+	border: 2px dashed #e17358;
+	padding: 30px;
+	font-style: italic;
+	margin: 2em 0;
+}
+
+.desc__text blockquote p:last-of-type {
+	margin-bottom: 0;
+}
+
+.desc__text img,
+.desc__text img.aligncenter {
+	display: block;
+	margin: 2em auto;
+}
+
+.desc__text img.alignleft {
+	display: inline;
+	float: left;
+	margin: 0 1.5em 1em 0;
+}
+
+.desc__text img.alignright {
+	display: inline;
+	float: right;
+	margin: 0 0 1em 1.5em;
+}
+
+.desc__text img.aligncenter {
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.desc__text table {
+	width: 100%;
+}
+
+.desc__text table thead th,
+.desc__text table thead td,
+.desc__text table tbody th,
+.desc__text table tbody td {
+	font-size: 16px;
+	line-height: 1.5;
+	padding: 12px 20px;
+	border: 1px solid #fff;
+	font-weight: normal;
+}
+
+.desc__text table thead td,
+.desc__text table tbody td {
+	color: #fff;
+}
+
+.desc__text table thead th,
+.desc__text table thead td {
+	color: #010310;
+	background-color: #fff;
+	text-transform: uppercase;
+}
+
+.desc__row {
+	display: flex;
+}
+
+.desc__inner {
+	display: flex;
+	width: calc(100% - 150px);
+}
+
+.desc__col {
+	width: 50%;
+}
+
+.desc__share {
+	position: relative;
+	z-index: 11;
+	cursor: pointer;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+	align-self: baseline;
+	width: 150px;
+	color: #fff;
+}
+
+.desc__share p {
+	width: 100%;
+	text-align: right;
+	margin-bottom: 15px;
+}
+
+.desc__share a,
+.desc__share i {
+	color: #fff;
+}
+
+.desc__share a:not(:first-child) {
+	margin-left: 10px;
+}
+
+.desc__author,
+.desc__count,
+.desc__view,
+.desc__time {
+	font-size: 16px;
+	color: #e17358;
+	margin-bottom: 15px;
+}
+
+.desc__author span,
+.desc__count span,
+.desc__view span,
+.desc__time span {
+	color: #fff;
+}
+
+.desc__author {
+	display: flex;
+	align-items: center;
+}
+
+.desc__author span {
+	display: flex;
+	align-items: center;
+}
+
+.desc__author img {
+	display: block;
+	width: 20px;
+	margin-right: 5px;
+}
+
+.mobile__visible {
+	display: none;
+}
+
+.mobile__hidden {
+	display: flex;
+}
+
+@media screen and (max-width: 1250px) {
+
+.desc__text img.alignleft {
+	float: none;
+	display: block;
+	margin: 2em auto;
+}
+
+.desc__text img.alignright {
+	float: none;
+	display: block;
+	margin: 2em auto;
+}
+
+}
+
+@media screen and (max-width: 1150px) {
+
+.desc__row {
+	display: block;
+}
+
+.desc__inner {
+	width: 100%;
+}
+
+}
+
+@media screen and (max-width: 1050px) {
+
+.mobile__visible {
+	display: none;
+}
+
+}
+
+@media screen and (max-width: 960px) {
+
+.desc__title {
+	font-size: 25px;
+}
+
+.desc__image {
+	width: 100%;
+	max-width: 400px;
+	margin: 0 auto;
+	margin-bottom: 40px;
+}
+
+.desc__content {
+	width: 100%;
+	padding-left: 0px;
+}
+
+}
+
+@media screen and (max-width: 780px) {
+
+.desc__wrap {
+	display: block;
+}
+
+.desc__data,
+.desc__update {
+	width: 50%;
+	margin-right: 0;
+}
+
+.mobile__visible {
+	display: block;
+}
+
+.mobile__hidden {
+	display: none;
+}
+
+}
+
+@media screen and (max-width: 560px) {
+
+.desc__block {
+	flex-wrap: wrap;
+}
+
+.desc__data,
+.desc__update {
+	width: 100%;
+	margin-bottom: 10px;
+}
+
+.desc__text h1,
+.desc__text h2 {
+	font-size: 26px;
+}
+
+.desc__text h3 {
+	font-size: 22px;
+}
+
+.desc__text h4,
+.desc__text h5,
+.desc__text h6 {
+	font-size: 18px;
+}
+
+.desc__text blockquote {
+	padding: 15px;
+}
+
+.desc__inner {
+	flex-wrap: wrap;
+}
+
+.desc__col {
+	width: 100%;
+}
+
+.desc__share {
+	justify-content: flex-start;
+	width: 100%;
+}
+
+.desc__share p {
+	width: auto;
+}
+
+.desc__author,
+.desc__count,
+.desc__view,
+.desc__time {
+	margin-bottom: 10px;
+}
+
+}
+
